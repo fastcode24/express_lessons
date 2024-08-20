@@ -1,0 +1,35 @@
+{
+  "name": "todo-nodejs",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts | pino-pretty --colorize --translateTime --ignore=\"pid,hostname\"",
+    "start:dev": "ts-node src/index.ts | pino-pretty --colorize --translateTime --ignore=\"pid,hostname\"",
+    "start:promise": "ts-node src/lessons/promise-array.ts",
+    "start:palindrome": "ts-node src/lessons/is-palindrome.ts",
+    "start:file": "ts-node src/lessons/write-file.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "4.19.2",
+    "pino": "9.3.2",
+    "pino-http": "10.2.0",
+    "pino-pretty": "11.2.2",
+    "sqlite": "5.1.1",
+    "sqlite3": "5.1.7",
+    "ws": "8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "22.4.1",
+    "@types/ws": "^8.5.12",
+    "nodemon": "^3.1.4",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.4"
+  }
+}
